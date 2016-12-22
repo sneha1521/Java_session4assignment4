@@ -1,0 +1,30 @@
+4. A program to demonstrate Constructor chaining in Java :
+
+package constructor;
+
+public class mychaining {
+
+	public mychaining(){
+        System.out.println("In default constructor...");
+    }
+    public mychaining(int i){
+        this();
+        System.out.println("In single parameter constructor...");
+    }
+    public mychaining(int i,int j){
+        this(j);
+        System.out.println("In double parameter constructor...");
+    }
+     
+    public static void main(String a[]){
+        mychaining ch = new mychaining(10,20);
+    }
+}
+
+
+
+Result :
+
+In default constructor...
+In single parameter constructor...
+In double parameter constructor...
